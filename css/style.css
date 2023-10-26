@@ -1,0 +1,163 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    font-size: 16px;
+    background-color: var(--bg);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    margin: 1rem;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+:root{
+    --bg: hsl(0, 0%, 95%);
+    --fb-blue: hsl(213.85,89.34%,52.16%);
+    --dark-blue: hsl(213.85,89.34%,25%);
+    --light-green: hsl(103, 70%, 50%);
+    --dark-green: hsl(103, 70%, 30%);
+
+    --light-gray: hsl(0, 0%, 80%);
+    --white: hsl(0, 0%, 100%);
+    --shadow: hsl(0, 0%, 81%);
+}
+/**********************************************************************/
+.notFacebook-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+}
+@media(min-width: 1200px){
+    .notFacebook-section{
+        display: grid;
+        grid-template-columns: 600px 400px;
+        text-align: left;
+    }
+}
+
+/**********************************************************************/
+.left-side{
+    display: grid;
+    justify-content: space-between;
+}
+.title-section{
+    width: 600px;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+}
+.logo{
+    color: var(--fb-blue);
+}
+
+/**********************************************************************/
+.right-side{
+    width: 400px;
+    text-align: center;
+}
+.login-section{
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 25px;
+    box-shadow: 0px 5px 15px var(--shadow);
+}
+input{
+    width: 350px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border-color: var(--light-gray);
+    border-style: solid;
+}
+.email{
+    border-width: 1px;
+}
+.password{
+    border-width: 1px;
+}
+.login-button{
+    background-color: var(--fb-blue);
+    border-style: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    cursor: pointer;
+}
+.login-button:active{
+    background-color: var(--dark-blue);
+}
+.forgotPassword{
+    width: 250px;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--fb-blue);
+}
+.forgotPassword:hover{
+    text-decoration: underline;
+}
+.forgotPassword:active{
+    color: var(--dark-blue);
+}
+hr{
+    border-color: var(--light-gray);
+    border-style: solid;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.newAccount-button{
+    width: 250px;
+    padding: 0.7rem;
+    background-color: var(--light-green);
+    border-style: none;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: -0.5rem;
+    cursor: pointer;
+}
+.newAccount-button:hover{
+    background-color: var(--dark-green);
+}
+.newAccount-button:active{
+    opacity: 90%;
+}
+.createPage{
+    margin-top: 1.5rem;
+    font-size: 14px;
+}
+.create-link{
+    font-weight: bold;
+    cursor: pointer;
+}
+.create-link:hover{
+    text-decoration: underline;
+}
+.create-link:active{
+    opacity: 90%;
+}
